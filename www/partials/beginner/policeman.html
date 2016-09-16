@@ -1,0 +1,108 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="6"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">A Policeman's job is to keep the people safe.</h1>
+    <h1 class= "textclass" id="pagetext2">He makes sure people follow the rules and laws.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}policeman_page1.jpg"/></div
+    </script>
+
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">He catches people who break the law. </h1>
+    <h1 class= "textclass" id="pagetext2">He also helps in keeping the traffic in order.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}policeman_page2.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext1">He stops the cars that go too fast, and gives them a ticket.</h1>
+        <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}policeman_page3.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">A policeman wears a uniform.</h1>
+    <h1 class= "textclass" id="pagetext2"> He also has special cars with lights, and sirens that make noise.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}policeman_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+        <h1 class= "textclass" id="pagetext3"> Some policemen also have dogs and horses to help them.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}policeman_page5.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">What does the policeman do?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Keeps People Safe
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Cooks Food
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">Do Policemen catch theives?</h1>
+    <div class="row">
+    <div class="col "><button class="choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">What does a policeman do when people drive too fast?</h1>
+    <div class="row">
+    <div class="col"><button class="choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Waves at them
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Gives them ticket
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">What does a police car have?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Baby Carseat
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Siren
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">Which animal helps the policemen?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Dog
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" on-touch='answerQuestion("#choice2", false)'>Cat
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page6">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

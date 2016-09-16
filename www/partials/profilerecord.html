@@ -1,0 +1,28 @@
+
+
+    <ion-header-bar align-title= "center" class= "bar bar-stable" >
+        <h1 class="title"> {{profile}}'s Progress Tracker</h1>
+        
+        <a class="button button-clear icon ion-reply pull-right" ng-href="#/home"></a>
+    </ion-header-bar>
+    <ion-content id="recordpage" scroll="true" overflow-scroll="true" class= "has-header">
+        <div id="recordalert">
+            <i class="ion-alert-circled" ></i>
+            <p>Hey {{profile}}, you haven't taken any quiz yet. </p><p>Please attempt some quizes to track your progress. </p><p>Happy learning!<i class="ion-thumbsup"></i></p></div>
+        </div>
+        <div>
+            <div class="list">
+                <div class="item item-icon-right" id="chapterdiv" ng-repeat="i in record">
+                    <div class="row">
+                        <div class="col col-offset-10 chapteraverages">{{i.data.chapter}}</div>
+                        <div class="col col-offset-60 chapteraverages">Average: {{i.av}}%</div>
+                        </div>
+
+                        <div class="item recorddata" ng-repeat="item in i.data.record">
+                            Correct : {{item.correctans}} of {{item.total}} <span class="timestamp">&nbsp;&nbsp;&nbsp;&nbsp; on {{item.date}}</span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+

@@ -1,0 +1,28 @@
+<ion-header-bar align-title="center" class="bar bar-stable">
+    <h1 class="title"> {{gradename}} Level</h1>
+    <a class="button icon-left ion-reply button-clear icon ion-reply pull-right" myclick="goBack()"></a>
+    
+</ion-header-bar>
+<ion-pane>
+    
+    <ion-content scroll="false" overflow-scroll="true" class= "has-header">
+        <div id= "gradecontent">
+            <p></p>
+            <ul id="subjectlist" >
+                <li id="subject"  ng-repeat = "subject in gradecontent">
+                    <div id="subjectdiv">
+                        <p>  {{subject.name}}   </p>
+                    </div>
+                    <div id="subjectcontent">
+                        <ul id="subjectchapters">
+                            <li id="chapter" ng-repeat = "chapter in subject.chapters">
+                                <a ng-href="{{chapter.url}}"><img ng-src="{{chapter.image}}"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </ion-content>
+</ion-pane>

@@ -1,0 +1,148 @@
+<div id="startbtndiv"><a class="button button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="8"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">Safety means staying away from things that can hurt you, like fire.</h1><h1 class= "textclass" id="pagetext2" >It is important to be careful near fire.</h1>
+    <h1 class= "textclass" id="pagetext3" >Learning some rules about fire can help you stay safe.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}firesafety_page1.jpg"/></div
+    </script>
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">Some fires are helpful.</h1>
+    <h1 class= "textclass" id="pagetext2">Fire can cook food, gives us light, and heat.</h1>
+    <h1 class= "textclass" id="pagetext3">These are controlled fires.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}firesafety_page2.jpg"/></div>
+    </script>
+
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext1">Sometimes fire can go out of control.</h1><h1 class= "textclass" id="pagetext2">This is dangerous. </h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}firesafety_page3.jpg"/></div>
+    </script>
+
+
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">Objects like matches, lighters, and heaters can start fire.</h1>
+    <h1 class= "textclass" id="pagetext2">They are not toys.</h1>
+    <h1 class= "textclass" id="pagetext3">Only adults should handles things like these.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}firesafety_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext1">In the kitchen, do not use the stoves and ovens alone.</h1>
+    <h1 class= "textclass" id="pagetext2">Always ask an adult to help.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}firesafety_page5.jpg"/></div>
+    </script>
+<script type="text/ng-template" id="page6">
+    <h1 class= "textclass" id="pagetext1">Electricity can also cause fire sometimes.</h1>
+    <h1 class= "textclass" id="pagetext2">Electric sockets are not for playing.</h1>
+    <h1 class= "textclass" id="pagetext3">Never use cracked and broken cords.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}firesafety_page6.jpg"/></div>
+    </script>
+<script type="text/ng-template" id="page7">
+    <h1 class= "textclass" id="pagetext1">Always let the adults handle the fire and electric appliances.</h1>
+    <h1 class= "textclass" id="pagetext2">This is important for fire safety.</h1>
+    
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}firesafety_page7.jpg"/></div>
+    </script>
+
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">Is it important to be careful near fire?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+        <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i>
+    </button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">Fire can help us in</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Cooking
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Washing
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">Fire which goes out of control is dangerous?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">Should you play with matches?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Yes
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>No
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">In kitchen, you should use oven </h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>With adult
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Alone
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+<script type="text/ng-template" id="page6_question">
+    <h1 id="pagetext">Can fire be caused by electricity?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+<script type="text/ng-template" id="page7_question">
+    <h1 id="pagetext">Who should handle electric appliances?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Children
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Adults
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i>
+    </button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page8">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

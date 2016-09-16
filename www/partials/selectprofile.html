@@ -1,0 +1,26 @@
+
+    <ion-modal-view class = "modal" ng-controller = "selectprofileController">
+    <ion-header-bar align-title= "center" class= "bar bar-stable">
+    <h1 class="title"> Select Profile</h1>
+    
+    <a class="button button-clear icon ion-reply pull-right" ng-click="closeModal()"></a>
+    </ion-header-bar>
+    <ion-content scroll="false" class= "has-header">
+        <div class="row">
+         <div class="col col-30 profileitem" ng-repeat = "profile in profiles">
+             <label class="item item-radio" >
+             <input type="radio" name="profilelist" ng-model="selected.profilename" ng-value="profile.profilename" ng-change = "selectProfile()">
+             
+                 <div class="item item-thumbnail profileradio" ng-class="{'selectedprofile': selected.profilename == profile.profilename}">
+                 <img ng-src='{{profile.pictureURL}}'/>
+                 <h2>{{profile.profilename}}</h2>
+                 
+                 </div>
+                 
+             </label>
+
+         </div>
+        </div>
+     
+    </ion-content>
+    </ion-modal-view>

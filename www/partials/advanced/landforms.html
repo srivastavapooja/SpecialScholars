@@ -1,0 +1,115 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="6"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">Do you know that one-fourth of the Earth’s surface is covered by land?</h1> <h1 class= "textclass" id="pagetext2">But the land on earth is not same everywhere.</h1>
+    <h1 class= "textclass" id="pagetext3">The different types of surfaces are called landforms.</h1>
+
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}landforms_page1.jpg"/></div
+    </script>
+
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">Mountains are the highest landfoms of earth.</h1><h1 class= "textclass" id="pagetext2">They may be steep and covered with snow.</h1>
+    <h1 class= "textclass" id="pagetext3">Hills are lower and less steep than montains; they are easier to climb.</h1>
+
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}landforms_page2.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext1">Wheather in mountains is generally cold.</h1>
+    <h1 class= "textclass" id="pagetext2">People cut the mountains to make roads for travel.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}landforms_page3.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">Some places have big areas of flat land.</h1><h1 class= "textclass" id="pagetext2">These are called plains.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}landforms_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext1">Sometimes there is a low area between two mountains or hills.</h1>
+    <h1 class= "textclass" id="pagetext2">These are called valleys.</h1>
+    <h1 class= "textclass" id="pagetext3">Valleys are often formed by rivers or glaciers.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}landforms_page5.jpg"/></div>
+    </script>
+
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">Different types of surfaces on earth are called</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Landforms
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Playground
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">Are hills higher than mountains?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Yes
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>No
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i>
+    </button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">How is the weather in mountains?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Hot
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Cold
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">How are plains?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Flat
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>High
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">Valleys are formed by</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Sun
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Rivers
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+
+<script type="text/ng-template" id="page6">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

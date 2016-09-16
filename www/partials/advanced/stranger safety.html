@@ -1,0 +1,113 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="6"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">We meet many people in the day.</h1><h1 class= "textclass" id="pagetext2" >We do not know some of the people we meet.</h1>
+    <h1 class= "textclass" id="pagetext3" >They are strangers.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}stranger_page1.jpg"/></div
+    </script>
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">Some strangers can help us if we are in trouble.</h1>
+    <h1 class= "textclass" id="pagetext2">These are safe strangers.</h1>
+    <h1 class= "textclass" id="pagetext3">Some safe strangers are a policeman or a doctor.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}stranger_page2.jpg"/></div>
+    </script>
+
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext1">All strangers may not be nice.</h1><h1 class= "textclass" id="pagetext2">We do not give information about ourselves to strangers. </h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}stranger_page3.jpg"/></div>
+    </script>
+
+
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">When we go out, we should be with a family member or teacher.</h1>
+    <h1 class= "textclass" id="pagetext2">We can also go out with an adult who mommy and daddy allows.</h1>
+    <h1 class= "textclass" id="pagetext3">We do not go away with strangers, or people we do not trust.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}stranger_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext1">It is OK to say no to strangers for things we don't like.</h1>
+    <h1 class= "textclass" id="pagetext2">This way we can be safe when we meet new people.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}stranger_page5.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">Are strangers people we know?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Yes
+        <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>No
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">What can safe strangers do? </h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Help us
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Scare us
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">Should we give our information to strangers?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Yes
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>No
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">Who can we go out with?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Stranger
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Teacher
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">Can you say no to a stranger's request?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page6">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

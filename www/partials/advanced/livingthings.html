@@ -1,0 +1,105 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="6"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">Living things are things that are alive, grow and change. </h1><h1 class= "textclass" id = "pagetext2" >Plants and animals are living things.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}livingthings_page1.jpg"/></div
+    </script>
+
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext">Some living things can move, like animals and people.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}livingthings_page2.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext">Some living things cannot move about, like plants.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}livingthings_page3.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">Some things can move but they are not alive.</h1><h1 class= "textclass" id="pagetext2"> They are non living things, like car.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}livingthings_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext">Living things need air, food, and water to grow.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}livingthings_page5.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">Do living things grow?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">Which is a living thing?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Car
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Dog
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">Do all living things move?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Yes
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>No
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">Is a truck a living thing? </h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Yes
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>No
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">Do living things eat food?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page6">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

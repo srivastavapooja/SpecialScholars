@@ -1,0 +1,105 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="6"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">We use our teeth for biting, chewing, talking, and smiling too. </h1> <h1 class= "textclass" id="pagetext2">Thats a lot of work! </h1> <h1 class= "textclass" id="pagetext3">That is why healthy teeth are important.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}teeth_page1.jpg"/></div
+    </script>
+
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">When we eat, food sticks to our teeth. </h1> <h1 class= "textclass" id="pagetext2">The teeth may become stained and hurt. </h1> <h1 class= "textclass" id="pagetext3">This makes the tooth sad</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}teeth_page2.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext">We can keep our teeth clean by regular brushing. </h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}teeth_page3.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext">We can also keep our teeth happy by eating healthy food</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}teeth_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext1">Visiting the dentist is also important for good teeth. </h1> <h1 class= "textclass" id="pagetext2">Dentists keep our teeth healthy. </h1> <h1 class= "textclass" id="pagetext3">A healthy tooth is a happy tooth.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}teeth_page5.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">We use our teeth for</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Eating
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Seeing
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">When we do not clean our teath they get</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Healthy
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Unhealthy
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">What can we do to clean our teeth?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Sleeping
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Brushing
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">Which is a healthy food for teeth?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Candy
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Yogurt
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">Do dentists help in keeping teeth healthy?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page6">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

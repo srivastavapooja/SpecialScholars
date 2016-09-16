@@ -1,0 +1,105 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="6"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">Seasons are different times of an year. </h1> <h1 class= "textclass" id="pagetext2">There are four seasons in an year - Winter, Spring, Summer and Fall.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}seasons_page1.jpg"/></div
+    </script>
+
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">Winters are cold. </h1> <h1 class= "textclass" id="pagetext2">There is less sunlight in winters. </h1> <h1 class= "textclass" id="pagetext3">It also snows at some places. </h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}seasons_page2.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext1">In spring new plants and flowers grow. </h1> <h1 class= "textclass" id="pagetext2">Weather gets warm and it rains.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}seasons_page3.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">Summers are hot and dry. </h1> <h1 class= "textclass" id="pagetext2">The sun is very bright in summer. </h1> <h1 class= "textclass" id="pagetext3">Children have vacations in schools during summers.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}seasons_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext1">In the fall season the weather becomes cool. </h1><h1 class= "textclass" id="pagetext2"> Many leaves change color and fall.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}seasons_page5.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">How many seasons are there?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>4
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>10
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">How do you feel in winter?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Hot
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+        </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Cold
+    
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">Do new flowers bloom in spring season?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">When do you feel hot?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Winter
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Summer
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">What happens in fall?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Leaves fall
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>It snows
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page6">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

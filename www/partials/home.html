@@ -1,0 +1,61 @@
+<ion-header-bar align-title="center" class="bar bar-stable" >
+    <h1 class="title">Special Scholars</h1>
+    <a id="profiledisplay" class="item item-avatar currentprofile"  href="#" on-touch="handleRecordPopover($event)">
+        <img ng-src="{{currentProfile.picture || '//:0'}}" />{{currentProfile.name}}...</a>
+    <a class = "button button-clear pull-right" myclick="openModal('settings')"><i class= "ion-gear-b settingsbtn"></i></a>
+</ion-header-bar>
+
+<ion-pane>
+    
+    <ion-content scroll="false" class= "has-header" id="maincontent" >
+        <div id= "maindiv" class="main">
+            
+            <ul class="list">
+                <li class="item" ng-repeat = "grade in grades">
+                    <a  ng-href="{{grade.gradeurl}}" ><img id="gradeimg" ng-src = "{{grade.img}}"/></a>
+                </li>
+            </ul>
+            
+        </div>
+    </ion-content>
+</ion-pane>
+
+<script id = "popover.html" type = "text/ng-template">
+    <ion-popover-view class="profilepopover">
+    <ion-content>
+    <a class="item item-icon-right bar bar-stable" ng-href="#/profilerecord">
+    View Progress
+    <i class="icon ion-document-text"></i>
+    </a>
+    </ion-content>
+    
+    </ion-popover-view>
+</script>
+
+<script id="settings.html" type="text/ng-template">
+    <ion-modal-view class="modal">
+    <ion-header-bar align-title= "center" class= "bar bar-stable">
+    <h1 class="title">Settings</h1>
+    <a class="button button-clear ion-close-round pull-right settingsbtn" myclick="closeModal('settings')"></a>
+    </ion-header-bar>
+    <ion-content >
+    <div class="list">
+    <div class="item item-divider">Manage Profiles</div>
+    <div class="item item-icon-right" ng-click="openModal('adddelprofile')">
+    Add-Remove Profiles
+    <i class="icon ion-person-add"></i>
+    </div>
+    <div class="item item-icon-right" ng-click="openModal('selectprofile')">
+    Select Profile
+    <i class="icon ion-person-stalker"></i>
+    </div>
+    <div class="item item-divider">General Settings</div>
+        <div class="item item-icon-right" ng-click="openModal('help')">
+    Help
+    <i class="icon ion-help-circled"></i>
+    </div>
+    
+    
+    </div>    </ion-content>
+    </ion-modal-view>
+    </script>

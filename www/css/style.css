@@ -1,0 +1,347 @@
+/* Empty. Add your own CSS if you like */
+html{
+    font: bold 1em "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#maincontent{
+    background: url("../img/background.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: contain;
+}
+
+#maindiv{
+
+    position:absolute;
+    right: 0px;
+    width:50%;
+    text-align:center;
+    margin: 20px 20px 20px 20px;
+    background-color:transparent;
+}
+.modal{
+    height: 50%;
+    
+}
+ion-header-bar{
+    background-color: rgb(153, 204, 255) !important;
+    border: none !important;
+    background-image: none !important;
+    color: black;
+}
+ion-footer-bar{
+    background-color: transparent !important;
+    border: none !important;
+    background-image: none !important;
+    color: black;
+}
+
+div#or_text, div#incorrect_text{
+    display: none;
+}
+#subjectdiv{
+    width: 100%;
+    margin:0px;
+    border: 0px;
+    background-color: rgb(175,220,228);
+    text-align: center;
+}
+#chapterdiv{
+    width: 100%;
+    margin:0px;
+    border: 0px;
+    text-align: center;
+
+}
+div.col.chapteraverages{
+    color: #0B6180;
+}
+div.item.recorddata{
+    padding:0px;
+    border:1px solid gray;
+    background-color: rgb(175, 220, 228);
+}
+.timestamp{
+    color: rgb(150,150,150);
+    text-align: right;
+}
+
+.bar.bar-stable a.item.item-avatar.currentprofile{
+    color: #000;
+    background-color: transparent;
+    border: none;
+    margin-top:0px;
+}
+div.item.item-thumbnail.newprofilepic, div.item.item-thumbnail.profileradio{
+    border:none !important;
+    
+}
+.item.item-input{
+    padding: 10px;
+}
+.highlightempty{
+    border: 1px solid red !important;
+}
+#profiledisplay{
+    display: none;
+}
+.profilepopover{
+    height: auto !important;
+    position:absolute;
+    top:50px !important;
+    width: 200px;
+}
+.profilepopover ion-content {
+    top: 0;
+    position: relative;
+}
+#alertid{
+    display: none;
+    color: red;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+#recordalert{
+    display: none;
+    font:1em;
+    color:red;
+    position:absolute;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+div.col.col-30.profileitem{
+    color: #FFF;
+    background-color: transparent;
+    border: none !important;
+    text-align: center;
+}
+.item.item-radio{
+    border: none;
+}
+.deleteprofileicon{
+    font-size: 2em;
+    display: none;
+}
+
+.selectedprofile{
+    background-color: rgb(175, 220, 228) !important;
+}
+#chapter, #profileitem{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+#totalpages, #previousbtn{
+    display:none;
+}
+#questionbtn{
+    margin-right: 120px;
+}
+div.resultdiv{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+.button.button-stable.savebtn{
+    margin: 20px;
+    background-color: rgb(175, 220, 228) !important;
+}
+#scorediv{
+    display: none;
+}
+.scoredivcolumn{
+    background-color: rgb(128,128,128);
+    text-align:center;
+    color:white;
+
+}
+#refreshbtn{
+    margin-right:60px;
+}
+.settingsbtn{
+    font: bold 2em Georgia, serif;
+    margin: 10px;
+}
+#correctsign, #incorrectsign{
+    display: none;
+}
+
+
+#quizpage{
+    position:absolute;
+    top: 50px;
+    text-align:center;
+    width:100%;
+}
+#quizpage.button.button-clear{
+    background-color: none;
+}
+#pagetext, #pagetext1, #pagetext2, #pagetext3{
+    width: 95%;
+    margin:10px;
+}
+#content{
+    opacity: 1.0;
+}
+ion-spinner{
+    display:none;
+    position:absolute;
+    top: 50px;
+    right:50px;
+}
+.main .list .item{
+    border: none;
+    background: transparent;
+}
+
+@media screen and (max-width: 690px) and (max-height: 387px) and (orientation: landscape)
+{
+    #gradeimg{
+        height:50px;
+        width:50px;
+    }
+    div.item.item-thumbnail.newprofilepic img{
+        width: 150px;
+        height:150px;
+    }
+    div.item.item-thumbnail.profileradio img{
+        width: 100px;
+        height:100px;
+    }
+    #subjectcontent img, #subjectlist img {
+        width: 90px;
+        height: 90px;
+        margin: 10px;
+    }
+    .choiceitem{
+        text-align: center;
+        font: bold 2em Georgia, serif;
+        border: 2px solid black;
+        margin: 50px;
+        height: 100px;
+        min-width: 150px
+    }
+    #quizpage img{
+        width: 100px;
+        height:100px;
+    }
+    .page_img{
+        width: 60%;
+        height: 150px;
+        position: absolute;
+        left: 100px;
+    }
+    #startbtndiv{
+        width:50%;
+        height: 100px;
+        position: absolute;
+        top: 100px;
+        left:200px;
+        z-index: 100;
+    }
+    h1, h3 {
+        font-size: 1.5em;
+        line-height: 1;
+    }
+    
+    .scroll-content{
+        overflow: auto;
+    }
+
+
+}
+@media screen and (min-width: 1024px) and (min-height: 768px) and (orientation: landscape)
+{
+    #maindiv{
+        top:100px;
+    }
+    #gradeimg{
+        height:100px;
+        width:100px;
+    }
+    div.item.item-thumbnail.newprofilepic img{
+        width: 150px;
+        height:150px;
+    }
+    div.item.item-thumbnail.profileradio img{
+        width: 100px;
+        height:100px;
+    }
+    #subjectcontent img, #subjectlist img {
+        width: 120px;
+        height: 120px;
+        margin: 20px;
+    }
+    .choiceitem{
+        text-align: center;
+        font: bold 3em Georgia, serif;
+        border: 2px solid black;
+        margin: 100px;
+        height: 200px;
+        min-width: 300px;
+    }
+    .page_img{
+        width: 95%;
+        height: 500px;
+        margin: 10px;
+    }
+    #startbtndiv{
+        width:50%;
+        height: 100px;
+        position: absolute;
+        top: 250px;
+        left:400px;
+        z-index: 100;
+    }
+
+
+
+}
+
+@media screen and (min-width: 690px)
+and (max-width: 1023px)
+and (min-height: 390px)
+and (max-height: 760px)
+and (orientation: landscape){
+    #gradeimg{
+        height:80px;
+        width:80px;
+    }
+    div.item.item-thumbnail.newprofilepic img{
+        width: 150px;
+        height:150px;
+    }
+    div.item.item-thumbnail.profileradio img{
+        width: 100px;
+        height:100px;
+    }
+    #subjectcontent img, #subjectlist img {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+    .choiceitem{
+        text-align: center;
+        font: bold 3em Georgia, serif;
+        border: 2px solid black;
+        margin: 100px;
+        height: 100px;
+        min-width: 200px
+    }
+    .page_img{
+        width: 95%;
+        height: 400px;
+        margin: 10px;
+    }
+    #startbtndiv{
+        width:50%;
+        height: 100px;
+        position: absolute;
+        top: 250px;
+        left:400px;
+        z-index: 100;
+    }
+    
+
+}

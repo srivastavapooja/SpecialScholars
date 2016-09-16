@@ -1,0 +1,117 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="6"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">How do you feel when you touch the pizza fresh out of oven?</h1>
+    <h1 class= "textclass" id="pagetext2">It feels hot.</h1>
+    <h1 class= "textclass" id="pagetext3">And How do you feel when you touch an icy glass of water?</h1>
+    <h1 class= "textclass" id="pagetext4">It feels cold.</h1>
+
+    <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}temperature_page1.jpg"/></div
+    </script>
+
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">Temperature is the measure of how hot or cold things are.</h1><h1 class= "textclass" id="pagetext2">Hot things, such as oven has high temperature.</h1>
+    <h1 class= "textclass" id="pagetext3">Cold things like icecream has lower temperature.</h1>
+
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}temperature_page2.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext1">We can measure temperature using a thermometer.</h1>
+    <h1 class= "textclass" id="pagetext2">More degrees in thermometer means higher temperature, and lesser degrees means lower temperature.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}temperature_page3.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">Temperature affects our bodies.</h1><h1 class= "textclass" id="pagetext2">When the temperature of our body increases, we get a fever.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}temperature_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext1">Temperature can also make things change.</h1>
+    <h1 class= "textclass" id="pagetext2">When a tray of water is put in cold freezer, water turns into ice.</h1>
+    <h1 class= "textclass" id="pagetext3">And when a pan of water is put on hot fire, it boils and becomes steam.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}temperature_page5.jpg"/></div>
+    </script>
+
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">A scoop of icecream is</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Cold
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Hot
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">The temperature of hot things is </h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Low
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>High
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i>
+    </button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">Temperature is measured using a </h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Cup
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Thermometer
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">When we have fever our body turns</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Hot
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>Cold
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">Does temperature change things?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+
+<script type="text/ng-template" id="page6">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+

@@ -1,0 +1,29 @@
+<ion-header-bar align-title="center" class="bar bar-stable chapter_header">
+            <h1 class="title">{{chaptername}}</h1>
+            <a class="button icon-left ion-reply calm button-clear" myclick="goBack()"></a>
+            
+            
+</ion-header-bar>
+        <ion-pane>
+            
+            <ion-content scroll="false" overflow-scroll="false" class= "has-header">
+                
+            <div ng-include="chapterurl"></div>
+                
+
+                
+            </ion-content>
+        </ion-pane>
+<ion-footer-bar align-title="right" class="bar bar-stable chapter_footer">
+    
+    <a class="button icon-left ion-arrow-left-a button-clear pull-left" id="previousbtn" myclick="decrementPage()"></a>
+    <a class="button icon-right ion-help-circled button-clear pull-right" id="questionbtn" myclick="askQuestion()"></a>
+    <a class="button icon-right ion-refresh button-clear pull-right" id="refreshbtn" myclick="refresh()"></a>
+    <a class="button icon-right ion-arrow-right-a button-clear pull-right" id = "nextbtn" myclick="incrementPage()">{{nextBtnText}}</a>
+    
+</ion-footer-bar>
+
+
+    </body>
+</html>
+

@@ -1,0 +1,23 @@
+<ion-modal-view class = "modal" ng-controller = "adddelprofileController">
+    <ion-header-bar align-title= "center" class= "bar bar-stable">
+        <h1 class="title"> Profiles</h1>
+        
+        <a class="button button-clear icon ion-reply pull-right" myclick="closeModal()"></a>
+    </ion-header-bar>
+    <ion-content scroll="false" ng-click="hidedeletebtn()">
+        <div class="row">
+            <div class="col col-30 profileitem" ng-repeat = "profile in profileslist">
+                    <div class="item item-thumbnail profileradio" ng-click="addprofile('{{profile.profilename}}')" on-hold="showdeletebtn('{{profile.profilename}}')">
+                            <img ng-src='{{profile.pictureURL}}'/>
+                            <h2>{{profile.profilename}}</h2>
+                            <i id="deleteprofileid_{{profile.profilename}}" class=" icon ion-close-circled deleteprofileicon" ng-click="deleteprofile('{{profile.profilename}}')"></i>
+                            
+                        </div>
+                        
+                        </label>
+                
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-modal-view>

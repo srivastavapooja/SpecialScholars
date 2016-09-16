@@ -1,0 +1,21 @@
+
+    <ion-modal-view class="modal" ng-controller = "newprofileController">
+    <ion-header-bar align-title= "center" class= "bar bar-stable">
+    <h1 class="title">New Profile</h1>
+    <a class="button button-clear" ng-click="saveNewProfile()">Save</a>
+    <a class="button button-clear icon ion-reply pull-right" ng-click="closeModal()"></a>
+    </ion-header-bar>
+    <ion-content scroll="false" class= "has-header">
+        
+            <label class="item item-input">
+                <input id="profileid" type="text" placeholder = "Profile Name" ng-model="newprofile.profilename">
+            </label>
+            
+            <div class="item item-thumbnail newprofilepic">
+                <img id="profileimgid" class="item item-thumbnail" ng-src='{{newprofile.pictureURL}}' on-touch="takePicture()"/></div>
+            <div id="alertid"><i class="ion-alert-circled" >{{alertmessage}}</i></div>
+                </div>
+                
+            
+    </ion-content>
+    </ion-modal-view>

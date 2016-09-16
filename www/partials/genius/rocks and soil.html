@@ -1,0 +1,128 @@
+<div id="startbtndiv"><a class="button  button-dark " id="start" ng-click="start(); $event.stopPropagation();"> Start Lesson </a></div>
+<div id="content">
+    <ng-include src= "pagenumber"></ng-include>
+    
+    <input type="text" id="totalpages" ng-value="7"></input>
+    <div id="or_text" >or</div>
+    <div id="incorrect_text" >incorrect</div>
+    
+    <ion-spinner class= "spinner-dark" id="spinner" ></ion-spinner>
+    
+    
+</div>
+<script type="text/ng-template" id="page1">
+    <h1 class= "textclass" id="pagetext1">Do you see rocks and soil around you?</h1> <h1 class= "textclass" id="pagetext2">Many different types of rocks and soil are found in nature.</h1>
+        <div class="row">
+    <div class="col"><img class ="page_img" ng-src="{{imgsrc}}rocks_page1.jpg"/></div
+    </script>
+
+<script type="text/ng-template" id="page2">
+    <h1 class= "textclass" id="pagetext1">Soil is made of peices of dead plants, animals and small rocks</h1><h1 class= "textclass" id="pagetext2">Soil can be dry or wet.</h1>
+    <h1 class= "textclass" id="pagetext3">Plants need soil to grow</h1>
+
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}rocks_page2.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page3">
+    <h1 class= "textclass" id="pagetext1">There are different types of rocks.</h1>
+    <h1 class= "textclass" id="pagetext2">Igneous rocks are made from cooled magma from volcanos.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}rocks_page3.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page4">
+    <h1 class= "textclass" id="pagetext1">Sedimentary rocks are tiny peices of rocks and soil, squeezed together.</h1><h1 class= "textclass" id="pagetext2">Metamorphic rocks are that have changed from another type of rock.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}rocks_page4.jpg"/></div>
+    </script>
+
+<script type="text/ng-template" id="page5">
+    <h1 class= "textclass" id="pagetext1">Sand is made of small peices of rocks and shells.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}rocks_page5.jpg"/></div>
+    </script>
+<script type="text/ng-template" id="page6">
+    <h1 class= "textclass" id="pagetext1">Some rocks are worn as gemstones.</h1>
+    <h1 class= "textclass" id="pagetext2">Diamond is also a rock.</h1>
+    <div class="row">
+    <div class="col"><img class ="page_img" src="{{imgsrc}}rocks_page6.jpg"/></div>
+    </script>
+
+
+
+<script type="text/ng-template" id="page1_question">
+    <h1 id="pagetext">Where can you find rocks and soil?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Bedroom
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Playground
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i>
+    </button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page2_question">
+    <h1 id="pagetext">Does soil contain dead plants?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button>
+    </div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i>
+    </button>
+    </div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page3_question">
+    <h1 id="pagetext">Igneous rocks are made by </h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Oceans
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Volcanos
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page4_question">
+    <h1 id="pagetext">Are sedimentary rocks made from tiny peices of rocks?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+<script type="text/ng-template" id="page5_question">
+    <h1 id="pagetext">What does sand contain?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", false)'>Rice
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", true)'>Shells
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    </div>
+    </script>
+<script type="text/ng-template" id="page6_question">
+    <h1 id="pagetext">Is diamond a rock?</h1>
+    <div class="row">
+    <div class="col"><button class=" choiceitem" id="choice1" ng-disabled="answerattempted" ng-click='answerQuestion("#choice1", true)'>Yes
+    <i class= "icon-right ion-checkmark-circled balanced" id="correctsign"></i></button></div>
+    <div class="col"><button class=" choiceitem" id="choice2" ng-disabled="answerattempted" ng-click='answerQuestion("#choice2", false)'>No
+    <i class="icon-right ion-close-circled assertive" id="incorrectsign"></i></button></div>
+    </div>
+    </script>
+
+
+<script type="text/ng-template" id="page7">
+    <div id="quizpage">
+    <a class="button button-clear" on-release="startQuiz()">
+    <img ng-src="img/icon_quiz.jpg"/>
+    </a>
+    </div>
+    </script>
+
+
