@@ -406,7 +406,7 @@ SpecialScholars
             else
                rate = 0.8;
             
-                TTS
+                $window.TTS
                 .speak({
                        text: $scope.text,
                        locale: 'en-GB',
@@ -416,7 +416,7 @@ SpecialScholars
                        $scope.ttsEnded = true;
                        angular.element(document.querySelector(id)).css({color: 'black'});
                        
-                       }, function (reason) {alert("TTS rejected: reason = "+reason);});
+                       }, function (reason) {console.log("TTS rejected: reason = "+reason);});
             
                 }
             

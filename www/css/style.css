@@ -18,6 +18,24 @@ html{
     margin: 20px 20px 20px 20px;
     background-color:transparent;
 }
+#startbtndiv{
+    width:50%;
+    height: 50%;
+    z-index: 100;
+    position:absolute;
+    right: 50px;
+    bottom: 50px;
+}
+.col.page_img_col{
+    height: 100%;
+    width: 100%;
+}
+.page_img{
+    width: 95%;
+    height: 70%;
+    
+}
+
 .modal{
     height: 50%;
     
@@ -228,18 +246,18 @@ ion-spinner{
     }
     .page_img{
         width: 60%;
-        height: 150px;
+       height: 150px;
         position: absolute;
         left: 100px;
     }
-    #startbtndiv{
+  /*  #startbtndiv{
         width:50%;
         height: 100px;
         position: absolute;
         top: 100px;
         left:200px;
         z-index: 100;
-    }
+    }*/
     h1, h3 {
         font-size: 1.5em;
         line-height: 1;
@@ -282,18 +300,16 @@ ion-spinner{
         min-width: 300px;
     }
     .page_img{
-        width: 95%;
         height: 500px;
-        margin: 10px;
     }
-    #startbtndiv{
+  /*  #startbtndiv{
         width:50%;
         height: 100px;
         position: absolute;
         top: 250px;
         left:400px;
         z-index: 100;
-    }
+    }*/
 
 
 
@@ -326,22 +342,21 @@ and (orientation: landscape){
         font: bold 3em Georgia, serif;
         border: 2px solid black;
         margin: 100px;
-        height: 100px;
-        min-width: 200px
+        height: 200px;
+        min-width: 250px
     }
     .page_img{
-        width: 95%;
         height: 400px;
-        margin: 10px;
+        
     }
-    #startbtndiv{
+ /*   #startbtndiv{
         width:50%;
         height: 100px;
         position: absolute;
         top: 250px;
         left:400px;
         z-index: 100;
-    }
+    }*/
     
 
 }
