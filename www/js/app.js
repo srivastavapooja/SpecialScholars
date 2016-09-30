@@ -27,7 +27,6 @@ SpecialScholars.config(['$routeProvider', function($routeProvider){
                      }]);
 
 SpecialScholars.controller('SpecialScholarsctrl', function($rootScope,$scope, $localStorage, $location, $ionicModal,$timeout, $ionicPlatform, profileService, $ionicPopover, profilerecordservice){
-                        
                          var grades = [{img: "img/beginner.jpg", gradeurl: "#/grade/Beginner"},
                                        {img: "img/advanced.jpg", gradeurl: "#/grade/Advanced"},
                                        {img: "img/genius.jpg", gradeurl: "#/grade/Genius"}];
